@@ -107,13 +107,23 @@ public class ProcessWarc {
     }
 
     public static void main(String[] args) throws IOException {
-        if (args.length != 3) {
+        /*if (args.length != 3) {
             usageAndExit();
         }
 
         String type = args[0];
         File inputArg = new File(args[1]);
-        File outArg = new File(args[2]);
+        File outArg = new File(args[2]);*/
+
+        //final String  input = "/home/aalto/dev/thesis_data/produced/index/processor/wrac";
+        //final String  output= "/home/aalto/dev/thesis_data/produced/index/processor/html";
+
+        final String  input = "/home/adriano_fazzone/dataset/Clueweb09_B/ClueWeb09_English_1/en0000/";
+        final String  output= "/home/adriano_fazzone/dataset/Clueweb09_B_HTML/";
+
+        String type = "dir";
+        File inputArg = new File(input);
+        File outArg = new File(output);
 
         if (type.equals("file")) {
             processFile(inputArg, outArg);
